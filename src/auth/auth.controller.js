@@ -13,7 +13,7 @@ function signin (req,res) {
     let hash = crypto.createHash('sha256').update(password).digest('hex')
     getUserFromDB(username)
     .then(response => {
-        if(response.length === 0) return res.sendStatus(404);
+        if(response.length === 0) return res.sendStatus(401);
         let payload = {
             username : response[0].username,
             admin : response[0].admin

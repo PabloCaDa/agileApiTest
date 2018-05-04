@@ -1,0 +1,26 @@
+{
+  "name": "agile-shop-api",
+  "version": "1.0.0",
+  "description": "API for a small shop",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "prod": "node index.js"
+  },
+  "author": "Pablo Cabrera",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "express": "^4.16.3",
+    "helmet": "^3.12.0",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.17",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "express-status-monitor": "^1.0.1",
+    "mongoose": "^5.0.17",
+    "nodemon": "^1.17.3"
+  }
+}

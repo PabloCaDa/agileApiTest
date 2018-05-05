@@ -40,7 +40,9 @@ And Run the API
 npm run dev
 ```
 
+
 **By default the API runs on:** *localhost:5000*
+
 
 ## Using the API 
 
@@ -86,7 +88,9 @@ DELETE api/customers/id
 PATCH api/customers/id
 ```
 
+
 **For a better explanation of the costumers endpoints, go to** */docs/costumers*
+
 
 
 ### Users
@@ -118,4 +122,5 @@ DELETE api/users/id
 ```
 PATCH /users/id
 ```
+
 **For a better explanation of the users endpoints, go to** */docs/users*

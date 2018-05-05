@@ -4,7 +4,7 @@ const usersRouter = require('./users');
 const costumersRouter = require('./costumers');
 const authRouter = require('./auth');
 
-const app = express()
+const app = module.exports = express()
 
 app.use(express.json());
 

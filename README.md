@@ -55,9 +55,10 @@ POST api/auth/login
 ```
  Providing a valid username and password, the API will sent you a token that you have to add to the **authorization field** on the **headers** of all your **requests**. Be aware, even if your user and password are correct, if you don't add this token to your headers you will never pass through the authorization middleware. 
 
- In the **users' folder** you will find some default users with different permissions, feel free to use them.
+ In the **users' folder** you will find a file called **usersCredentials** with some default users with different permissions, feel free to use them.
 
 **For a better explanation of the authorization POST, go to** */docs/auth/signin*
+> e.g. localhost:5000/docs/auth/signin
 
 ### Costumers
 

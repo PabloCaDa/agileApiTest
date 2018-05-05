@@ -32,7 +32,7 @@ function getAll(req,res){
 }
 
 module.exports.getAll.blueprint = `
-## GET ${PATH}/     or     ${PATH}?pages=number&offset=number
+## GET ${PATH}/     or     api${PATH}?pages=number&offset=number
 + Request (application/json)
   + Query Parameters
     + pages (number) - Current page
@@ -102,8 +102,8 @@ module.exports.create.blueprint = `
 + Request (application/json)
   + Body
     {
-        name: 'Bruce',
-        surname: 'Banner',
+        *name: 'Bruce',    *required file
+        *surname: 'Banner',
         photoURL: 'https://i.imgur.com/mszCGXY.jpg',
     }
 + Response 201 (application/json)

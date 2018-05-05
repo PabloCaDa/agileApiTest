@@ -33,7 +33,7 @@ function getAll(req,res){
 }
 
 module.exports.getAll.blueprint = `
-## GET ${PATH}/     or     ${PATH}?pages=number&offset=number
+## GET ${PATH}/     or     api/${PATH}?pages=number&offset=number
 + Request (application/json)
   + Query Parameters
     + pages (number) - Current page
@@ -46,8 +46,8 @@ module.exports.getAll.blueprint = `
       data: {
         type: 'users',
         attributes: [{
-          _id: '545362362',
-          username: 'StanL',
+          _id: '545362362', 
+          username: 'StanL', 
           name: 'Stan',
           surname: 'Lee',
           password: '111',
@@ -100,12 +100,13 @@ module.exports.create.blueprint = `
 + Request (application/json)
   + Body
     {
-        username: 'StanL',
-        name: 'Stan',
-        surname: 'Lee',
-        password: '111',
-        admin: true
+       *username: 'StanL',     * required field
+       *name: 'Stan', 
+       *surname: 'Lee', 
+       *password: '111', 
+       *admin: true 
     }
+    * required field
 + Response 201 (application/json)
 {
     data: {

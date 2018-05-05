@@ -40,6 +40,8 @@ And Run the API
 npm run dev
 ```
 
+**By default the API runs on:** *localhost:5000*
+
 ## Using the API 
 
 ### Auth

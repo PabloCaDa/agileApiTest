@@ -1,6 +1,7 @@
 const COSTUMERModel = require('./costumers.model')
 const JAPI = require('../services/jsonapi')
 const _ = require('lodash')
+const PATH = require('./constants')
 
 module.exports = {
     getAllCostumers : getAllCostumers,
@@ -29,6 +30,31 @@ function getAllCostumers(req,res){
         }) 
         .catch((err) => res.json(err))
 }
+
+module.exports.getAllCostumers.blueprint = `
+## GET ${PATH}/{?pages=number&offset=number}
++ Request (application/json)
+  + Parameters
+    + pages (number) - Current page
+      + Default: 1
+    + offset (number) - Number of costumers per page
+      + Default: 10
++ Response 200 (application/json)
+  + Body
+    {
+      data: {
+        type: 'users',
+        attributes: [{
+          id: 0,
+          name: 'coin',
+          status: 'open',
+          value: 1337
+        }]
+      },
+      meta: { lastPage: 'Link' },
+      links: { self: 'Link', prev: 'Link', next: 'Link', first: 'link', last: 'link' }
+    }
+`
 
 function getCostumersByID(req,res){
 

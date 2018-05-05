@@ -4,31 +4,27 @@ const morgan = require('morgan')
 const helmet = require('helmet')
 const cors = require('cors');
 const auth = require('./auth');
-const usersRouter = require('./users');
-const costumersRouter = require('./costumers');
-const authRouter = require('./auth');
+const users = require('./users');
+const costumers = require('./costumers');
+const api = require('./api')
 
-const PORT = 5000
+
+const PORT = 5000;
 const app = express()
 
 app.use(monitor())
-app.use(express.json());  
 app.use(cors());  
  
 app.use(helmet())
 app.use(helmet.noCache())
 app.use(morgan('tiny'))
 
-app.use(auth.middleware.secureHeaders)
-
-app.use('/auth', authRouter);
-app.use('/users', auth.middleware.authorization, auth.middleware.adminDetector, usersRouter);
-app.use('/costumers', auth.middleware.authorization, costumersRouter);
-
+app.use('/api', api)
+app.get('/docs', generateDocs([auth.blueprint]),generateDocs([users.blueprint]), generateDocs([costumers.blueprint]))
 
 module.exports = function startUp(){
     return app.listen(PORT, (err) => {
-        console.log(`Servidor listo en el puerto ${PORT}`)
+        console.log(`Servidor listo en  http://localhost:${PORT}`)
         if (err) console.log('El servidor no esta escuchando')
 })
 }

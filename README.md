@@ -8,7 +8,7 @@ There are two resources that can be invoked: **costumers** and **users**.
 **Costumers**: Every registered user can manipulate this resource by doing the next actions: 
 
     • List all costumers in the DB.
-    • Get one constumer in concrete.
+    • Get a specific costumer.
     • Create a new costumer.
     • Update a costumer's information.
     • Delete a costumer in the DB.
@@ -16,7 +16,7 @@ There are two resources that can be invoked: **costumers** and **users**.
 **Users**: Only users with *admin permission* can manage this resource by doing the next actions: 
 
     • List all users in DB.
-    • Get one user in concrete.
+    • Get a specific user.
     • Create a new costumer.
     • Update a costumer's information.
     • Delete a costumer in the DB
@@ -53,15 +53,15 @@ The first step to reach the resources of the API is to **authenticate yourself**
 ```
 POST api/auth/login
 ```
- Providing a valid username and password, the API will sent you a token that you have to add to your header requests on the field **authorization**. Be aware, even if your user and password are correct, if you don't add this token to your headers you will never pass through the authorization middleware. 
+ Providing a valid username and password, the API will sent you a token that you have to add to the **authorization field** on the **headers** of all your **requests**. Be aware, even if your user and password are correct, if you don't add this token to your headers you will never pass through the authorization middleware. 
 
- In the **users' folder** you will find some default users with different permissions, feel free to play with them.
+ In the **users' folder** you will find some default users with different permissions, feel free to use them.
 
 **For a better explanation of the authorization POST, go to** */docs/auth/signin*
 
 ### Costumers
 
-Once you are authorizated, you can access to this resource, this are the **endpoints** for each action:
+Once you are authorizated, you can access to this resource. These are the **endpoints** for each action:
 
 - **Get all costumers**: 
 ```
@@ -95,7 +95,7 @@ PATCH api/customers/id
 
 ### Users
 
-**Remember!** You can only access this resources logged as an admin user. Here comes the **endpoints**:
+**Remember!** You can only access these resources if you logged as an admin user. Here comes the **endpoints**:
 
 - **Create a user**: 
 

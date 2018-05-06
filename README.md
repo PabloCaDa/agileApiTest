@@ -69,7 +69,7 @@ Once you are authorizated, you can access to this resource. These are the **endp
 GET api/customers
 ```
 
-- **Get one costumer**: 
+- **Get a specific costumer**: 
 ```
 GET api/customers/id
 ```
@@ -98,20 +98,21 @@ PATCH api/customers/id
 
 **Remember!** You can only access these resources if you logged as an admin user. Here comes the **endpoints**:
 
-- **Create a user**: 
-
-```
-POST api/users
-```
 
 - **Get all users**: 
 ```
 GET api/users
 ```
 
-- **Get one user**: 
+- **Get a specific user**: 
 ```
 GET api/users/id
+```
+
+- **Create a user**: 
+
+```
+POST api/users
 ```
 
 - **Delete a user**: 

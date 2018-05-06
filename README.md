@@ -131,5 +131,5 @@ PATCH /users/id
 ## Measurment and Control
 
 You can control the requests made to the API in the console thanks to **morgan** middleware and also get metrics and
-graphics thanks to express-monitor middleware that runs in to this URL:
+graphics thanks to **express-monitor** middleware that runs in to this URL:
 > localhost:5000/status

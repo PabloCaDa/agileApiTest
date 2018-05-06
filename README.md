@@ -126,3 +126,10 @@ PATCH /users/id
 ```
 
 **For a better explanation of the users endpoints, go to** */docs/users*
+
+
+## Measurment and Control
+
+You can control the requests made to the API in the console thanks to **morgan** middleware and also get metrics and
+graphics thanks to express-monitor middleware that runs in to this URL:
+> localhost:5000/status
